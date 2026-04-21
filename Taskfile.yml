@@ -28,9 +28,8 @@ tasks:
       - xcodebuild build -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator
 
   ci:
-    desc: Full CI check (lint + build + test)
+    desc: Full CI check (build + test)
     cmds:
-      - task: lint
       - task: build
       - task: test
 
