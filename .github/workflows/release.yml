@@ -18,4 +18,4 @@ jobs:
       enable_release_notes: true
       enable_updates: true
     secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      github-token: ${{ github.token }}
