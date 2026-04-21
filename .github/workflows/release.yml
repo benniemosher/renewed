@@ -17,4 +17,5 @@ jobs:
       enable_draft: ${{ github.event_name == 'pull_request' }}
       enable_release_notes: true
       enable_updates: true
-    secrets: inherit
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
