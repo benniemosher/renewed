@@ -9,6 +9,6 @@ jobs:
   release:
     uses: Mosher-Labs/.github/.github/workflows/release.yml@main
     with:
-      dry-run: ${{ github.event_name == 'pull_request' }}
-    secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      enable_draft: ${{ github.event_name == 'pull_request' }}
+      enable_release_notes: true
+      enable_updates: true
