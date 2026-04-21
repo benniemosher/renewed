@@ -1,0 +1,13 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    uses: Mosher-Labs/.github/.github/workflows/release.yml@main
+    with:
+      dry-run: false
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
