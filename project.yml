@@ -1,0 +1,90 @@
+name: Renewed
+bundleIdPrefix: com.benniemosher
+deploymentTarget:
+  iOS: "16.0"
+
+configs:
+  Debug: debug
+  Release: release
+
+targets:
+  Renewed:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+        createIntermediateGroups: true
+    resources:
+      - Resources
+    entitlements:
+      path: Sources/Config/Renewed.entitlements
+      properties:
+        com.apple.developer.icloud-container-identifiers:
+          - iCloud.$(CFBundleIdentifier)
+        com.apple.developer.icloud-services:
+          - CloudKit
+        com.apple.security.application-groups:
+          - group.com.benniemosher.renewed
+    info:
+      path: Sources/Config/Info.plist
+      properties:
+        CFBundleDisplayName: Renewed
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UILaunchScreen:
+          UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+
+  RenewedWidget:
+    type: app-extension
+    subtype: widget
+    platform: iOS
+    sources:
+      - path: Widget/Sources
+        createIntermediateGroups: true
+    resources:
+      - Widget/Resources
+    entitlements:
+      path: Widget/Config/RenewedWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.benniemosher.renewed
+    info:
+      path: Widget/Config/Info.plist
+      properties:
+        CFBundleDisplayName: Renewed Widget
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).Widget
+
+  RenewedTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests/Unit
+        createIntermediateGroups: true
+    dependencies:
+      - target: Renewed
+    info:
+      path: Tests/Info.plist
+
+schemes:
+  Renewed:
+    build:
+      targets:
+        Renewed: all
+        RenewedWidget: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - name: RenewedTests
+          coverage: true
