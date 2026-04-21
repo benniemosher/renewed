@@ -3,11 +3,12 @@ name: Release
 on:
   push:
     branches: [main]
+  pull_request:
 
 jobs:
   release:
     uses: Mosher-Labs/.github/.github/workflows/release.yml@main
     with:
-      dry-run: false
+      dry-run: ${{ github.event_name == 'pull_request' }}
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}

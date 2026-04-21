@@ -15,7 +15,7 @@ tasks:
   test:
     desc: Run unit tests
     cmds:
-      - xcodebuild test -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 16"
+      - xcodebuild test -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator -destination "platform=iOS Simulator,name=Personal iPhone"
 
   lint:
     desc: Run pre-commit hooks
