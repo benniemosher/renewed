@@ -11,6 +11,10 @@ targets:
   Renewed:
     type: application
     platform: iOS
+    bundleId: com.benniemosher.renewed
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.benniemosher.renewed
     sources:
       - path: Sources
         createIntermediateGroups: true
@@ -46,6 +50,10 @@ targets:
     type: app-extension
     subtype: widget
     platform: iOS
+    bundleId: com.benniemosher.renewed.widget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.benniemosher.renewed.widget
     sources:
       - path: Widget/Sources
         createIntermediateGroups: true
@@ -67,6 +75,11 @@ targets:
   RenewedTests:
     type: bundle.unit-test
     platform: iOS
+    bundleId: com.benniemosher.renewed.tests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.benniemosher.renewed.tests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Renewed.app/Renewed"
     sources:
       - path: Tests/Unit
         createIntermediateGroups: true

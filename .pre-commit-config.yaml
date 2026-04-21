@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: detect-private-key
+
+  - repo: local
+    hooks:
+      - id: swift-format
+        name: Swift Format
+        entry: swift-format
+        language: system
+        files: '\.swift$'
+        pass_filenames: true
+        args: ["--in-place", "--recursive"]
+        stages: [pre-commit]
+        # Skip if swift-format not installed
+        require_serial: false

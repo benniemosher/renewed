@@ -1,9 +1,9 @@
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 @main
 struct RenewedWidgetBundle: WidgetBundle {
-    var body: some Widget {
-        RenewedWidget()
-    }
+  var body: some Widget {
+    RenewedWidget()
+  }
 }

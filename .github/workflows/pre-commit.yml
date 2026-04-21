@@ -1,0 +1,10 @@
+name: Pre-Commit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    uses: Mosher-Labs/.github/.github/workflows/pre-commit.yml@main

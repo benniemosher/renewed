@@ -38,10 +38,10 @@
 ## Ticket Workflow
 
 1. **Claim:** Comment on issue with "🤖 Taking this"
-2. **Branch:** `feature/TICKET-XXX-short-desc`
+2. **Branch:** `feature-XXX-short-desc` (kebab-case, no slashes)
 3. **TDD:** Red test → Green test → Commit
-4. **Commit:** Pre-commit must pass
-5. **PR:** Link issue with `Closes #XXX`
+4. **Commit:** `type: #XXX: Description` (e.g., `feat: #3: Add Taskfile`)
+5. **PR:** Title matches commit format, body links with `Closes #XXX`
 
 ## Dev Commands
 

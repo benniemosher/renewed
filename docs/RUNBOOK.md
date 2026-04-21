@@ -10,14 +10,16 @@ Operations procedures for the Renewed project. For architecture, see [ARCHITECTU
 # 1. Get next available ticket
 task agent:next
 
-# 2. Create feature branch
-git checkout -b feature/TICKET-XXX-short-description
+# 2. Create feature branch (kebab-case, no slashes)
+git checkout -b feature-XXX-short-description
 
 # 3. Work the ticket (TDD: test → implementation)
-# 4. Commit (pre-commit hooks run automatically)
-# 5. Push and create PR
+# 4. Commit: type: #XXX: Description
+git commit -m "feat: #3: Add Taskfile"
+
+# 5. Push and create PR (title matches commit format)
 git push -u origin HEAD
-gh pr create --title "feat: description"
+gh pr create --title "feat: #3: Add Taskfile" --body "Closes #3"
 ```
 
 ### Pre-Commit Hooks

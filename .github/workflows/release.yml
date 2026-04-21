@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  release:
+    uses: Mosher-Labs/.github/.github/workflows/release.yml@main
+    with:
+      enable_draft: ${{ github.event_name == 'pull_request' }}
+      enable_release_notes: true
+      enable_updates: true
