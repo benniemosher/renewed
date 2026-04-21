@@ -1,0 +1,41 @@
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  bootstrap:
+    desc: First-time setup
+    cmds:
+      - brew bundle check || brew bundle
+      - pre-commit install
+      - echo "Bootstrap complete!"
+
+  test:
+    desc: Run unit tests
+    cmds:
+      - xcodebuild test -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 16"
+
+  lint:
+    desc: Run pre-commit hooks
+    cmds:
+      - pre-commit run --all-files
+
+  build:
+    desc: Build the project
+    cmds:
+      - xcodebuild build -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator
+
+  ci:
+    desc: Full CI check (lint + build + test)
+    cmds:
+      - task: lint
+      - task: build
+      - task: test
+
+  clean:
+    desc: Clean build artifacts
+    cmds:
+      - xcodebuild clean -project Renewed.xcodeproj -scheme Renewed
+      - rm -rf ~/Library/Developer/Xcode/DerivedData/Renewed-*
