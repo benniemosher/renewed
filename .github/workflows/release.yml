@@ -17,5 +17,4 @@ jobs:
       enable_draft: ${{ github.event_name == 'pull_request' }}
       enable_release_notes: true
       enable_updates: true
-    secrets:
-      HEIMDALLR_TOKEN: ${{ secrets.HEIMDALLR_TOKEN }}
+    secrets: inherit
