@@ -1,9 +1,9 @@
 name: Release
 
 on:
+  pull_request:
   push:
     branches: [main]
-  pull_request:
 
 permissions:
   contents: write
@@ -17,5 +17,4 @@ jobs:
       enable_draft: ${{ github.event_name == 'pull_request' }}
       enable_release_notes: true
       enable_updates: true
-    secrets:
-      github-token: ${{ github.token }}
+    secrets: inherit
