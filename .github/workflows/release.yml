@@ -18,4 +18,4 @@ jobs:
       enable_release_notes: true
       enable_updates: true
     secrets:
-      github-token: ${{ secrets.HEIMDALLR_TOKEN }}
+      HEIMDALLR_TOKEN: ${{ secrets.HEIMDALLR_TOKEN }}
