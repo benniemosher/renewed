@@ -195,3 +195,5 @@ All diagrams render in GitHub markdown. Keep them simple and focused.
 
 - [AGENT.md](/AGENT.md) - Agent guide
 - [RUNBOOK.md](RUNBOOK.md) - Procedures
+- [STATUS.md](STATUS.md) - Project status
+- [CHANGELOG.md](/CHANGELOG.md) - Release history
