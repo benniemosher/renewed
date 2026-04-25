@@ -80,8 +80,10 @@ task ci          # Full CI check
 
 - [Architecture](docs/ARCHITECTURE.md) - System design
 - [Runbook](docs/RUNBOOK.md) - Procedures
+- [Status](docs/STATUS.md) - Project status
+- [Changelog](CHANGELOG.md) - Release history
 - [GitHub Project](https://github.com/users/benniemosher/projects/2) - Sprint board
-- [Issues](https://github.com/benniemosher/renewed/issues) - Tickets
+- [Issues](https://github.com/Mosher-Labs/renewed/issues) - Tickets
 
 ---
 **Reminder:** Be concise. Save tokens. Build with purpose.

@@ -155,4 +155,6 @@ xcrun simctl erase all
 
 - [AGENT.md](/AGENT.md) - Agent guide
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System design
+- [STATUS.md](STATUS.md) - Project status
+- [CHANGELOG.md](/CHANGELOG.md) - Release history
 - [GitHub Project](https://github.com/users/benniemosher/projects/2) - Sprint board
