@@ -1,4 +1,4 @@
-name: Tests
+name: CI
 
 on:
   pull_request:
@@ -6,7 +6,21 @@ on:
     branches: [main]
 
 jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: >
+          xcodebuild build
+          -project Renewed.xcodeproj
+          -scheme Renewed
+          -sdk iphonesimulator
+          -destination "platform=iOS Simulator,name=iPhone 15"
+
   test:
+    needs: build
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
