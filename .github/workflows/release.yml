@@ -1,14 +1,19 @@
-name: Release
-
+---
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
+
+permissions: read-all
 
 jobs:
   release:
-    uses: Mosher-Labs/.github/.github/workflows/release.yml@main
-    with:
-      enable_draft: ${{ github.event_name == 'pull_request' }}
-      enable_release_notes: true
-      enable_updates: true
+    uses: "Mosher-Labs/.github/.github/workflows/release.yml@main"
+    secrets: inherit
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
