@@ -1,5 +1,9 @@
 # Renewed
 
+[![Build](https://github.com/Mosher-Labs/renewed/actions/workflows/build.yml/badge.svg)](https://github.com/Mosher-Labs/renewed/actions/workflows/build.yml)
+[![Tests](https://github.com/Mosher-Labs/renewed/actions/workflows/test.yml/badge.svg)](https://github.com/Mosher-Labs/renewed/actions/workflows/test.yml)
+[![Pre-Commit](https://github.com/Mosher-Labs/renewed/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/Mosher-Labs/renewed/actions/workflows/pre-commit.yml)
+
 A Christ-centered recovery tracking app. Celebrate freedom, not shame.
 
 ## Prerequisites

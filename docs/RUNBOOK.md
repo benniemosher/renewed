@@ -27,18 +27,21 @@ gh pr create --title "feat: #3: Add Taskfile" --body "Closes #3"
 Installed via pre-commit framework:
 
 ```bash
-pre-commit install        # One-time setup
+pre-commit install --hook-type pre-commit --hook-type pre-push  # One-time setup
 pre-commit run --all-files  # Manual run
-task lint                  # Via Taskfile
+task lint                   # Via Taskfile
 ```
 
-Hooks:
+**Pre-commit hooks** (run on every commit):
 - trailing-whitespace
 - end-of-file-fixer
 - check-yaml
 - detect-private-key
 - swift-format (if available)
-- unit tests
+- xcodegen (when `project.yml` changes)
+
+**Pre-push hooks** (run before push):
+- xcode-test — runs full test suite locally to catch failures before CI
 
 ### CI Pipeline
 
