@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: >
+          xcodebuild build
+          -project Renewed.xcodeproj
+          -scheme Renewed
+          -sdk iphonesimulator
+          -destination "generic/platform=iOS Simulator"
+
+  test:
+    needs: build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test
+        run: >
+          xcodebuild test
+          -project Renewed.xcodeproj
+          -scheme Renewed
+          -sdk iphonesimulator
+          -destination "platform=iOS Simulator,name=iPhone 16"

@@ -19,3 +19,19 @@ repos:
         stages: [pre-commit]
         # Skip if swift-format not installed
         require_serial: false
+
+      - id: xcodegen
+        name: Regenerate Xcode Project
+        entry: bash -c 'xcodegen generate && git add Renewed.xcodeproj'
+        language: system
+        files: 'project\.yml$'
+        pass_filenames: false
+        stages: [pre-commit]
+
+      - id: xcode-test
+        name: Xcode Tests
+        entry: bash -c 'xcodebuild test -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15" -quiet'
+        language: system
+        always_run: true
+        pass_filenames: false
+        stages: [pre-push]
