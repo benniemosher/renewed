@@ -1,0 +1,37 @@
+import Foundation
+import SwiftData
+
+@Model
+final class Tracker {
+  var id: UUID
+  var title: String
+  var startDate: Date
+  var category: TrackerCategory
+  var iconName: String
+  var color: String
+  var createdAt: Date
+  var updatedAt: Date
+
+  init(
+    id: UUID = UUID(),
+    title: String,
+    startDate: Date,
+    category: TrackerCategory,
+    iconName: String,
+    color: String,
+    createdAt: Date = Date(),
+    updatedAt: Date = Date()
+  ) {
+    precondition(!title.isEmpty, "Title must not be empty")
+    precondition(startDate <= Date(), "Start date must not be in the future")
+
+    self.id = id
+    self.title = title
+    self.startDate = startDate
+    self.category = category
+    self.iconName = iconName
+    self.color = color
+    self.createdAt = createdAt
+    self.updatedAt = updatedAt
+  }
+}
