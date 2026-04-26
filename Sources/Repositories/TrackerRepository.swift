@@ -1,3 +1,5 @@
+import Foundation
+
 protocol TrackerRepository {
   func fetchAll() async throws -> [Tracker]
   func create(_ tracker: Tracker) async throws

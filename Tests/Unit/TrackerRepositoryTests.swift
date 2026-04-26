@@ -10,7 +10,7 @@ final class TrackerRepositoryTests: XCTestCase {
 
   override func setUp() async throws {
     try await super.setUp()
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true, cloudKitDatabase: .none)
     container = try ModelContainer(for: Tracker.self, configurations: config)
     context = ModelContext(container)
     repository = SwiftDataTrackerRepository(modelContext: context)
@@ -132,10 +132,12 @@ final class TrackerRepositoryTests: XCTestCase {
     )
 
     try await repository.create(tracker)
-    XCTAssertEqual(try await repository.fetchAll().count, 1)
+    let beforeDelete = try await repository.fetchAll()
+    XCTAssertEqual(beforeDelete.count, 1)
 
     try await repository.delete(tracker)
-    XCTAssertEqual(try await repository.fetchAll().count, 0)
+    let afterDelete = try await repository.fetchAll()
+    XCTAssertEqual(afterDelete.count, 0)
   }
 
   // MARK: - Error descriptions
