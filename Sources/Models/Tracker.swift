@@ -1,6 +1,20 @@
 import Foundation
 import SwiftData
 
+enum TrackerValidationError: LocalizedError, Equatable {
+  case emptyTitle
+  case futureDateNotAllowed
+
+  var errorDescription: String? {
+    switch self {
+    case .emptyTitle:
+      return "Title must not be empty"
+    case .futureDateNotAllowed:
+      return "Start date must not be in the future"
+    }
+  }
+}
+
 @Model
 final class Tracker {
   var id: UUID
@@ -21,9 +35,13 @@ final class Tracker {
     color: String,
     createdAt: Date = Date(),
     updatedAt: Date = Date()
-  ) {
-    precondition(!title.isEmpty, "Title must not be empty")
-    precondition(startDate <= Date(), "Start date must not be in the future")
+  ) throws {
+    guard !title.isEmpty else {
+      throw TrackerValidationError.emptyTitle
+    }
+    guard startDate <= Date() else {
+      throw TrackerValidationError.futureDateNotAllowed
+    }
 
     self.id = id
     self.title = title
