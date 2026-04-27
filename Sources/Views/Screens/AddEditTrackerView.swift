@@ -130,6 +130,13 @@ struct AddEditTrackerView: View {
       tracker.iconName = iconName
       tracker.color = color
       tracker.updatedAt = Date()
+
+      do {
+        try modelContext.save()
+      } catch {
+        errorMessage = error.localizedDescription
+        return
+      }
     } else {
       do {
         let newTracker = try Tracker(
@@ -140,6 +147,7 @@ struct AddEditTrackerView: View {
           color: color
         )
         modelContext.insert(newTracker)
+        try modelContext.save()
       } catch let error as TrackerValidationError {
         errorMessage = error.errorDescription
         return
