@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D44749C7C93E4DC42A957ED /* TrackerRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */; };
+		24194D0CEC21650371DA3251 /* TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C054D6732FD0D07615293 /* TrackerUITests.swift */; };
 		3445177327DBEE420EAC9D71 /* RenewedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */; };
 		396CEE9B353BD344DC23C2DD /* DateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A82AC5A1A0C88B58B7512 /* DateCalculationService.swift */; };
 		3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CF87781BD007A756F5673 /* SettingsView.swift */; };
@@ -32,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2872AC4A400C9C065C7EA2DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A94643718A78293D13D6D77B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC36E598559AB6926C09BA4B;
+			remoteInfo = Renewed;
+		};
 		D4D713FF0761016F7BFFCAE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A94643718A78293D13D6D77B /* Project object */;
@@ -60,10 +68,12 @@
 		6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidget.swift; sourceTree = "<group>"; };
 		89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedApp.swift; sourceTree = "<group>"; };
+		931C054D6732FD0D07615293 /* TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerUITests.swift; sourceTree = "<group>"; };
 		9CFE1C3C24BBDE97583AB65B /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		A4DC09C6AA7D0BC666AEF25C /* Renewed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Renewed.entitlements; sourceTree = "<group>"; };
 		AA7C0BD36DBDA2FAFD62D4C0 /* Renewed.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Renewed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedTests.swift; sourceTree = "<group>"; };
+		D07AB3DF7ED6D197E86FB098 /* RenewedUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = RenewedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCardView.swift; sourceTree = "<group>"; };
 		DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTrackerRepository.swift; sourceTree = "<group>"; };
 		DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerGridView.swift; sourceTree = "<group>"; };
@@ -123,6 +133,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6CEACE5089A17B944B188246 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				931C054D6732FD0D07615293 /* TrackerUITests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		73F8723E515CD0BD6389788E = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +174,7 @@
 			children = (
 				AA7C0BD36DBDA2FAFD62D4C0 /* Renewed.app */,
 				06DBE82BC759C230F1737AAA /* RenewedTests.xctest */,
+				D07AB3DF7ED6D197E86FB098 /* RenewedUITests.xctest */,
 				5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */,
 			);
 			name = Products;
@@ -195,6 +214,7 @@
 		D2D1A9458D82041142BB1E8B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6CEACE5089A17B944B188246 /* UI */,
 				3745F514A792E246FEE3D813 /* Unit */,
 			);
 			path = Tests;
@@ -229,6 +249,24 @@
 			productName = RenewedTests;
 			productReference = 06DBE82BC759C230F1737AAA /* RenewedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D005558889A1BF47B8FF4F5D /* RenewedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27367D4ECAC493259CD8AE7C /* Build configuration list for PBXNativeTarget "RenewedUITests" */;
+			buildPhases = (
+				7F45C86E5F9B96732D21ABCF /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A280680B00FBC71B34207E2E /* PBXTargetDependency */,
+			);
+			name = RenewedUITests;
+			packageProductDependencies = (
+			);
+			productName = RenewedUITests;
+			productReference = D07AB3DF7ED6D197E86FB098 /* RenewedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		D947BC9ECAEFF43486B8BB41 /* RenewedWidget */ = {
 			isa = PBXNativeTarget;
@@ -273,6 +311,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					D005558889A1BF47B8FF4F5D = {
+						TestTargetID = FC36E598559AB6926C09BA4B;
+					};
 				};
 			};
 			buildConfigurationList = 22F4DCCB1AA9C66D3EC33656 /* Build configuration list for PBXProject "Renewed" */;
@@ -291,6 +332,7 @@
 			targets = (
 				FC36E598559AB6926C09BA4B /* Renewed */,
 				0679313A064384C1C3136D8F /* RenewedTests */,
+				D005558889A1BF47B8FF4F5D /* RenewedUITests */,
 				D947BC9ECAEFF43486B8BB41 /* RenewedWidget */,
 			);
 		};
@@ -329,6 +371,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F45C86E5F9B96732D21ABCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24194D0CEC21650371DA3251 /* TrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89529C9F3F5D7A70E7F807C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +397,11 @@
 			isa = PBXTargetDependency;
 			target = FC36E598559AB6926C09BA4B /* Renewed */;
 			targetProxy = D4D713FF0761016F7BFFCAE2 /* PBXContainerItemProxy */;
+		};
+		A280680B00FBC71B34207E2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC36E598559AB6926C09BA4B /* Renewed */;
+			targetProxy = 2872AC4A400C9C065C7EA2DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +468,23 @@
 			};
 			name = Debug;
 		};
+		5B87F88EDD5CB1FC0C53CC18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benniemosher.renewed.ui-tests";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Renewed;
+			};
+			name = Release;
+		};
 		6574447449FF73B7D78AB8F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +549,23 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Renewed.app/Renewed";
+			};
+			name = Debug;
+		};
+		CB54327E3A62950840D8DDFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benniemosher.renewed.ui-tests";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Renewed;
 			};
 			name = Debug;
 		};
@@ -585,6 +674,15 @@
 			buildConfigurations = (
 				23022B3ECCEBA44C5F8571DB /* Debug */,
 				F1EC73B6107F5C7E6B1054FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		27367D4ECAC493259CD8AE7C /* Build configuration list for PBXNativeTarget "RenewedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB54327E3A62950840D8DDFF /* Debug */,
+				5B87F88EDD5CB1FC0C53CC18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

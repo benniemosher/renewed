@@ -61,9 +61,11 @@ struct AddEditTrackerView: View {
           }
         }
         .pickerStyle(.segmented)
+        .accessibilityIdentifier("categoryPicker")
 
         if category == .custom {
           TextField("Give it a name", text: $customName)
+            .accessibilityIdentifier("customNameField")
         }
       }
 
@@ -74,6 +76,7 @@ struct AddEditTrackerView: View {
           in: ...Date(),
           displayedComponents: .date
         )
+        .accessibilityIdentifier("startDatePicker")
       }
 
       Section("Icon") {
@@ -89,6 +92,7 @@ struct AddEditTrackerView: View {
           Text(errorMessage)
             .foregroundColor(.red)
             .font(.callout)
+            .accessibilityIdentifier("errorMessage")
         }
       }
 
@@ -97,6 +101,7 @@ struct AddEditTrackerView: View {
           Button("Delete Tracker", role: .destructive) {
             showDeleteConfirmation = true
           }
+          .accessibilityIdentifier("deleteButton")
           .frame(maxWidth: .infinity)
         }
       }

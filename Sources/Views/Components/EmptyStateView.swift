@@ -18,5 +18,6 @@ struct EmptyStateView: View {
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .accessibilityElement(children: .combine)
+    .accessibilityIdentifier("emptyStateView")
   }
 }

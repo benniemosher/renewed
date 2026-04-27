@@ -22,6 +22,7 @@ struct TrackerListView: View {
             .onDelete(perform: deleteTrackers)
           }
           .listStyle(.plain)
+          .accessibilityIdentifier("trackerList")
         }
       }
       .navigationTitle("Trackers")
