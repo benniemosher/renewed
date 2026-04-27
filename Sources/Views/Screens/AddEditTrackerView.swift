@@ -101,14 +101,11 @@ struct AddEditTrackerView: View {
         }
       }
     }
-    .confirmationDialog(
-      "Delete Tracker",
-      isPresented: $showDeleteConfirmation,
-      titleVisibility: .visible
-    ) {
+    .alert("Delete Tracker", isPresented: $showDeleteConfirmation) {
       Button("Delete", role: .destructive) {
         deleteTracker()
       }
+      Button("Cancel", role: .cancel) {}
     } message: {
       Text("Are you sure? This cannot be undone.")
     }
