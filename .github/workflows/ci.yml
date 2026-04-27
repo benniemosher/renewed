@@ -31,4 +31,4 @@ jobs:
           -project Renewed.xcodeproj
           -scheme Renewed
           -sdk iphonesimulator
-          -destination "platform=iOS Simulator,name=iPhone 16"
+          -destination "generic/platform=iOS Simulator"
