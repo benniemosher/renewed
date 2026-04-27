@@ -6,6 +6,7 @@ struct AddEditTrackerView: View {
   @Environment(\.dismiss) private var dismiss
 
   private let tracker: Tracker?
+  private let onSave: (() -> Void)?
 
   @State private var title: String
   @State private var startDate: Date
@@ -32,8 +33,9 @@ struct AddEditTrackerView: View {
     }
   }
 
-  init(tracker: Tracker? = nil) {
+  init(tracker: Tracker? = nil, onSave: (() -> Void)? = nil) {
     self.tracker = tracker
+    self.onSave = onSave
     _title = State(initialValue: tracker?.title ?? "")
     _startDate = State(initialValue: tracker?.startDate ?? Date())
     _category = State(initialValue: tracker?.category ?? .sobriety)
@@ -85,9 +87,11 @@ struct AddEditTrackerView: View {
     .navigationTitle(isEditMode ? "Edit Tracker" : "New Tracker")
     .navigationBarTitleDisplayMode(.inline)
     .toolbar {
-      ToolbarItem(placement: .cancellationAction) {
-        Button("Cancel") {
-          dismiss()
+      if isEditMode {
+        ToolbarItem(placement: .cancellationAction) {
+          Button("Cancel") {
+            dismiss()
+          }
         }
       }
       ToolbarItem(placement: .confirmationAction) {
@@ -137,7 +141,21 @@ struct AddEditTrackerView: View {
       }
     }
 
-    dismiss()
+    if isEditMode {
+      dismiss()
+    } else {
+      resetForm()
+      onSave?()
+    }
+  }
+
+  private func resetForm() {
+    title = ""
+    startDate = Date()
+    category = .sobriety
+    iconName = "leaf.fill"
+    color = "green"
+    errorMessage = nil
   }
 }
 

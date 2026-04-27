@@ -1,22 +1,27 @@
 import SwiftUI
 
 struct MainTabView: View {
+  @State private var selectedTab = 0
+
   var body: some View {
-    TabView {
+    TabView(selection: $selectedTab) {
       TrackerListView()
         .tabItem {
           Label("Trackers", systemImage: "list.bullet")
         }
+        .tag(0)
 
-      AddTrackerView()
+      AddTrackerView(onSave: { selectedTab = 0 })
         .tabItem {
           Label("Add", systemImage: "plus.circle.fill")
         }
+        .tag(1)
 
       SettingsView()
         .tabItem {
           Label("Settings", systemImage: "gear")
         }
+        .tag(2)
     }
   }
 }
