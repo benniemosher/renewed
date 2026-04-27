@@ -88,6 +88,22 @@ targets:
     info:
       path: Tests/Info.plist
 
+  RenewedUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    bundleId: com.benniemosher.renewed.ui-tests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.benniemosher.renewed.ui-tests
+        TEST_TARGET_NAME: Renewed
+    sources:
+      - path: Tests/UI
+        createIntermediateGroups: true
+    dependencies:
+      - target: Renewed
+    info:
+      path: Tests/Info.plist
+
 schemes:
   Renewed:
     build:
@@ -101,3 +117,4 @@ schemes:
       targets:
         - name: RenewedTests
           coverage: true
+        - name: RenewedUITests

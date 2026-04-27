@@ -17,14 +17,14 @@ enum TrackerValidationError: LocalizedError, Equatable {
 
 @Model
 final class Tracker {
-  var id: UUID
-  var title: String
-  var startDate: Date
-  var category: TrackerCategory
-  var iconName: String
-  var color: String
-  var createdAt: Date
-  var updatedAt: Date
+  var id: UUID = UUID()
+  var title: String = ""
+  var startDate: Date = Date()
+  var category: TrackerCategory = TrackerCategory.sobriety
+  var iconName: String = "leaf.fill"
+  var color: String = "green"
+  var createdAt: Date = Date()
+  var updatedAt: Date = Date()
 
   init(
     id: UUID = UUID(),

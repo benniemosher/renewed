@@ -64,6 +64,17 @@
                ReferencedContainer = "container:Renewed.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D005558889A1BF47B8FF4F5D"
+               BuildableName = "RenewedUITests.xctest"
+               BlueprintName = "RenewedUITests"
+               ReferencedContainer = "container:Renewed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <CommandLineArguments>
       </CommandLineArguments>

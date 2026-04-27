@@ -22,13 +22,14 @@ struct TrackerListView: View {
             .onDelete(perform: deleteTrackers)
           }
           .listStyle(.plain)
+          .accessibilityIdentifier("trackerList")
         }
       }
       .navigationTitle("Trackers")
-      .navigationDestination(for: UUID.self) { _ in
-        Text("Tracker Detail")
-          .font(.title)
-          .foregroundColor(.secondary)
+      .navigationDestination(for: UUID.self) { trackerId in
+        if let tracker = trackers.first(where: { $0.id == trackerId }) {
+          AddEditTrackerView(tracker: tracker)
+        }
       }
     }
   }
