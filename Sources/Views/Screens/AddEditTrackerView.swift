@@ -8,7 +8,7 @@ struct AddEditTrackerView: View {
   private let tracker: Tracker?
   private let onSave: (() -> Void)?
 
-  @State private var title: String
+  @State private var customName: String
   @State private var startDate: Date
   @State private var category: TrackerCategory
   @State private var iconName: String
@@ -16,6 +16,13 @@ struct AddEditTrackerView: View {
   @State private var errorMessage: String?
 
   private var isEditMode: Bool { tracker != nil }
+
+  private var resolvedTitle: String {
+    if category == .custom {
+      return customName
+    }
+    return category.rawValue.capitalized
+  }
 
   private var selectedColor: Color {
     switch color {
@@ -36,7 +43,7 @@ struct AddEditTrackerView: View {
   init(tracker: Tracker? = nil, onSave: (() -> Void)? = nil) {
     self.tracker = tracker
     self.onSave = onSave
-    _title = State(initialValue: tracker?.title ?? "")
+    _customName = State(initialValue: tracker?.category == .custom ? (tracker?.title ?? "") : "")
     _startDate = State(initialValue: tracker?.startDate ?? Date())
     _category = State(initialValue: tracker?.category ?? .sobriety)
     _iconName = State(initialValue: tracker?.iconName ?? "leaf.fill")
@@ -47,7 +54,16 @@ struct AddEditTrackerView: View {
   var body: some View {
     Form {
       Section("What are you celebrating?") {
-        TextField("e.g. Sobriety, New Beginning", text: $title)
+        Picker("Category", selection: $category) {
+          ForEach(TrackerCategory.allCases, id: \.self) { cat in
+            Text(cat.rawValue.capitalized).tag(cat)
+          }
+        }
+        .pickerStyle(.segmented)
+
+        if category == .custom {
+          TextField("Give it a name", text: $customName)
+        }
       }
 
       Section("When did your journey begin?") {
@@ -57,15 +73,6 @@ struct AddEditTrackerView: View {
           in: ...Date(),
           displayedComponents: .date
         )
-      }
-
-      Section("Category") {
-        Picker("Category", selection: $category) {
-          ForEach(TrackerCategory.allCases, id: \.self) { cat in
-            Text(cat.rawValue.capitalized).tag(cat)
-          }
-        }
-        .pickerStyle(.segmented)
       }
 
       Section("Icon") {
@@ -105,9 +112,10 @@ struct AddEditTrackerView: View {
   private func save() {
     errorMessage = nil
 
+    let titleToSave = resolvedTitle
+
     if isEditMode, let tracker {
-      // Validate before mutating
-      guard !title.isEmpty else {
+      guard !titleToSave.isEmpty else {
         errorMessage = TrackerValidationError.emptyTitle.errorDescription
         return
       }
@@ -116,7 +124,7 @@ struct AddEditTrackerView: View {
         return
       }
 
-      tracker.title = title
+      tracker.title = titleToSave
       tracker.startDate = startDate
       tracker.category = category
       tracker.iconName = iconName
@@ -125,7 +133,7 @@ struct AddEditTrackerView: View {
     } else {
       do {
         let newTracker = try Tracker(
-          title: title,
+          title: titleToSave,
           startDate: startDate,
           category: category,
           iconName: iconName,
@@ -150,7 +158,7 @@ struct AddEditTrackerView: View {
   }
 
   private func resetForm() {
-    title = ""
+    customName = ""
     startDate = Date()
     category = .sobriety
     iconName = "leaf.fill"
