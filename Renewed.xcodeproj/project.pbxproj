@@ -14,7 +14,9 @@
 		459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF89D75ACB3DC857DBF506 /* MainTabView.swift */; };
 		4D1D42330A88C584717EFA94 /* DateCalculationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E18C5046C87B8585D9F610E /* DateCalculationServiceTests.swift */; };
 		5993C10C69C2A211CAA5915D /* TrackerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEC173CB0AA0445A5AF25E /* TrackerListView.swift */; };
+		5DEB4FFA44C7EAC3187CA2FA /* ColorPickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */; };
 		61EC46CA3CCDA2C060757786 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411283F45317AA62F5D3BE1B /* TrackerTests.swift */; };
+		623CF9E31AF35ECE4CD145D6 /* AddEditTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */; };
 		7FD4B5D0EC88FCB74D12069E /* TrackerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */; };
 		92408B3BD16304646E52F30C /* RenewedWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */; };
 		9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE1C3C24BBDE97583AB65B /* Tracker.swift */; };
@@ -24,6 +26,7 @@
 		C0F5E123488761034E91473B /* RenewedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */; };
 		DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */; };
 		E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */; };
+		EDB55016F595BDC395DFC3C0 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643321B76E30506023F5149A /* IconPickerView.swift */; };
 		F151E2A82E0346395A109774 /* AddTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */; };
 		FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */; };
 /* End PBXBuildFile section */
@@ -48,10 +51,12 @@
 		2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackerView.swift; sourceTree = "<group>"; };
 		296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		2B6A82AC5A1A0C88B58B7512 /* DateCalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculationService.swift; sourceTree = "<group>"; };
+		311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTrackerView.swift; sourceTree = "<group>"; };
 		411283F45317AA62F5D3BE1B /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidgetBundle.swift; sourceTree = "<group>"; };
 		45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepositoryTests.swift; sourceTree = "<group>"; };
 		5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RenewedWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		643321B76E30506023F5149A /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
 		6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidget.swift; sourceTree = "<group>"; };
 		89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedApp.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedTests.swift; sourceTree = "<group>"; };
 		D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCardView.swift; sourceTree = "<group>"; };
 		DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTrackerRepository.swift; sourceTree = "<group>"; };
+		DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerGridView.swift; sourceTree = "<group>"; };
 		E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateCalculationService.swift; sourceTree = "<group>"; };
 		FE2A3306704DA73C96729906 /* TrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +164,9 @@
 		93460AFB8EFF8E2BCDFFBF1A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */,
 				296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */,
+				643321B76E30506023F5149A /* IconPickerView.swift */,
 				D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */,
 			);
 			path = Components;
@@ -167,6 +175,7 @@
 		BEC697DDC7E3E6A6C5C577AA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */,
 				2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */,
 				0FDF89D75ACB3DC857DBF506 /* MainTabView.swift */,
 				108CF87781BD007A756F5673 /* SettingsView.swift */,
@@ -301,10 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623CF9E31AF35ECE4CD145D6 /* AddEditTrackerView.swift in Sources */,
 				F151E2A82E0346395A109774 /* AddTrackerView.swift in Sources */,
+				5DEB4FFA44C7EAC3187CA2FA /* ColorPickerGridView.swift in Sources */,
 				396CEE9B353BD344DC23C2DD /* DateCalculationService.swift in Sources */,
 				DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */,
 				E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */,
+				EDB55016F595BDC395DFC3C0 /* IconPickerView.swift in Sources */,
 				459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */,
 				FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */,
 				3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */,
