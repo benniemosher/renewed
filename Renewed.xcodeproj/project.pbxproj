@@ -15,6 +15,7 @@
 		4D1D42330A88C584717EFA94 /* DateCalculationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E18C5046C87B8585D9F610E /* DateCalculationServiceTests.swift */; };
 		5993C10C69C2A211CAA5915D /* TrackerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEC173CB0AA0445A5AF25E /* TrackerListView.swift */; };
 		61EC46CA3CCDA2C060757786 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411283F45317AA62F5D3BE1B /* TrackerTests.swift */; };
+		7FD4B5D0EC88FCB74D12069E /* TrackerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */; };
 		92408B3BD16304646E52F30C /* RenewedWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */; };
 		9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE1C3C24BBDE97583AB65B /* Tracker.swift */; };
 		A7553B50942C320AAD5F3DD3 /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */; };
@@ -22,6 +23,7 @@
 		BF05B4AFB47D36B8344FF0D8 /* SwiftDataTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */; };
 		C0F5E123488761034E91473B /* RenewedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */; };
 		DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */; };
+		E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */; };
 		F151E2A82E0346395A109774 /* AddTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */; };
 		FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,7 @@
 		1F93ADC8867894D16B0BB5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		24CEC173CB0AA0445A5AF25E /* TrackerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerListView.swift; sourceTree = "<group>"; };
 		2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackerView.swift; sourceTree = "<group>"; };
+		296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		2B6A82AC5A1A0C88B58B7512 /* DateCalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculationService.swift; sourceTree = "<group>"; };
 		411283F45317AA62F5D3BE1B /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidgetBundle.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		A4DC09C6AA7D0BC666AEF25C /* Renewed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Renewed.entitlements; sourceTree = "<group>"; };
 		AA7C0BD36DBDA2FAFD62D4C0 /* Renewed.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Renewed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedTests.swift; sourceTree = "<group>"; };
+		D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCardView.swift; sourceTree = "<group>"; };
 		DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTrackerRepository.swift; sourceTree = "<group>"; };
 		E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateCalculationService.swift; sourceTree = "<group>"; };
 		FE2A3306704DA73C96729906 /* TrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepository.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		077C726CDA976CAC133C651E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93460AFB8EFF8E2BCDFFBF1A /* Components */,
 				BEC697DDC7E3E6A6C5C577AA /* Screens */,
 			);
 			path = Views;
@@ -148,6 +153,15 @@
 				5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		93460AFB8EFF8E2BCDFFBF1A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */,
+				D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BEC697DDC7E3E6A6C5C577AA /* Screens */ = {
@@ -290,11 +304,13 @@
 				F151E2A82E0346395A109774 /* AddTrackerView.swift in Sources */,
 				396CEE9B353BD344DC23C2DD /* DateCalculationService.swift in Sources */,
 				DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */,
+				E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */,
 				459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */,
 				FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */,
 				3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */,
 				BF05B4AFB47D36B8344FF0D8 /* SwiftDataTrackerRepository.swift in Sources */,
 				9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */,
+				7FD4B5D0EC88FCB74D12069E /* TrackerCardView.swift in Sources */,
 				A7553B50942C320AAD5F3DD3 /* TrackerCategory.swift in Sources */,
 				5993C10C69C2A211CAA5915D /* TrackerListView.swift in Sources */,
 				B15C7257E8E078064EAEC121 /* TrackerRepository.swift in Sources */,
