@@ -14,6 +14,7 @@ struct AddEditTrackerView: View {
   @State private var iconName: String
   @State private var color: String
   @State private var errorMessage: String?
+  @State private var showDeleteConfirmation = false
 
   private var isEditMode: Bool { tracker != nil }
 
@@ -90,6 +91,26 @@ struct AddEditTrackerView: View {
             .font(.callout)
         }
       }
+
+      if isEditMode {
+        Section {
+          Button("Delete Tracker", role: .destructive) {
+            showDeleteConfirmation = true
+          }
+          .frame(maxWidth: .infinity)
+        }
+      }
+    }
+    .confirmationDialog(
+      "Delete Tracker",
+      isPresented: $showDeleteConfirmation,
+      titleVisibility: .visible
+    ) {
+      Button("Delete", role: .destructive) {
+        deleteTracker()
+      }
+    } message: {
+      Text("Are you sure? This cannot be undone.")
     }
     .navigationTitle(isEditMode ? "Edit Tracker" : "New Tracker")
     .navigationBarTitleDisplayMode(.inline)
@@ -163,6 +184,13 @@ struct AddEditTrackerView: View {
       resetForm()
       onSave?()
     }
+  }
+
+  private func deleteTracker() {
+    guard let tracker else { return }
+    modelContext.delete(tracker)
+    try? modelContext.save()
+    dismiss()
   }
 
   private func resetForm() {
