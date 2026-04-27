@@ -5,7 +5,7 @@ import SwiftUI
 struct RenewedApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      MainTabView()
     }
     .modelContainer(for: Tracker.self)
   }
