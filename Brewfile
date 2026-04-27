@@ -1,3 +1,4 @@
+brew "fswatch"
 brew "go-task"
 brew "pre-commit"
 brew "swift-format"

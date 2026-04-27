@@ -27,6 +27,29 @@ tasks:
     cmds:
       - xcodebuild build -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator
 
+  run:
+    desc: Build, install, and launch on simulator
+    cmds:
+      - xcrun simctl boot "iPhone 15" 2>/dev/null || true
+      - open -a Simulator
+      - task: build
+      - |
+        APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData/Renewed-*/Build/Products/Debug-iphonesimulator -name "Renewed.app" -type d | head -n 1)
+        xcrun simctl install booted "$APP_PATH"
+        xcrun simctl launch booted com.benniemosher.renewed
+
+  watch:
+    desc: Watch for changes and auto-rebuild/relaunch
+    deps: [run]
+    cmds:
+      - |
+        echo "Watching for changes... (Ctrl+C to stop)"
+        fswatch -o Sources/ Widget/ | while read -r event; do
+          echo "=== Rebuilding at $(date '+%H:%M:%S') ==="
+          xcrun simctl terminate booted com.benniemosher.renewed 2>/dev/null || true
+          task run
+        done
+
   ci:
     desc: Full CI check (build + test)
     cmds:
