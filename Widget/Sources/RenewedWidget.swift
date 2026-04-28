@@ -40,6 +40,7 @@ struct RenewedWidgetEntryView: View {
       Text("days")
         .font(.caption)
     }
+    .containerBackground(.fill.tertiary, for: .widget)
   }
 }
 
