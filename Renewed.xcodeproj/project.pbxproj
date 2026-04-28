@@ -28,6 +28,7 @@
 		BF05B4AFB47D36B8344FF0D8 /* SwiftDataTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */; };
 		C0F5E123488761034E91473B /* RenewedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */; };
 		DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */; };
+		E076648CFA888626885214FB /* RenewedWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */; };
 		EDB55016F595BDC395DFC3C0 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643321B76E30506023F5149A /* IconPickerView.swift */; };
 		F151E2A82E0346395A109774 /* AddTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */; };
@@ -42,6 +43,13 @@
 			remoteGlobalIDString = FC36E598559AB6926C09BA4B;
 			remoteInfo = Renewed;
 		};
+		73D520096F1A4245A9428013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A94643718A78293D13D6D77B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D947BC9ECAEFF43486B8BB41;
+			remoteInfo = RenewedWidget;
+		};
 		D4D713FF0761016F7BFFCAE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A94643718A78293D13D6D77B /* Project object */;
@@ -50,6 +58,20 @@
 			remoteInfo = Renewed;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6317031843C91BD1842C879 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E076648CFA888626885214FB /* RenewedWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06DBE82BC759C230F1737AAA /* RenewedTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = RenewedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,10 +327,12 @@
 			buildPhases = (
 				48D35782586A7BB08D2C00CF /* Sources */,
 				847F4CC676F321CAEF08270B /* Resources */,
+				F6317031843C91BD1842C879 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2D01BB720CFB8E0E7F91E0A3 /* PBXTargetDependency */,
 			);
 			name = Renewed;
 			packageProductDependencies = (
@@ -420,6 +444,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2D01BB720CFB8E0E7F91E0A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D947BC9ECAEFF43486B8BB41 /* RenewedWidget */;
+			targetProxy = 73D520096F1A4245A9428013 /* PBXContainerItemProxy */;
+		};
 		5D6AA99173F42E0ADF7D2436 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC36E598559AB6926C09BA4B /* Renewed */;

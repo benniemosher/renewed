@@ -31,6 +31,8 @@ targets:
           - CloudKit
         com.apple.security.application-groups:
           - group.com.benniemosher.renewed
+    dependencies:
+      - target: RenewedWidget
     info:
       path: Sources/Config/Info.plist
       properties:
@@ -70,9 +72,6 @@ targets:
       path: Widget/Config/Info.plist
       properties:
         CFBundleDisplayName: Renewed Widget
-        NSExtension:
-          NSExtensionPointIdentifier: com.apple.widgetkit-extension
-          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).Widget
 
   RenewedTests:
     type: bundle.unit-test
