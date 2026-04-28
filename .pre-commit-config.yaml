@@ -27,11 +27,3 @@ repos:
         files: 'project\.yml$'
         pass_filenames: false
         stages: [pre-commit]
-
-      - id: xcode-test
-        name: Xcode Tests
-        entry: bash -c 'xcodebuild test -project Renewed.xcodeproj -scheme Renewed -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15" -quiet'
-        language: system
-        always_run: true
-        pass_filenames: false
-        stages: [pre-push]

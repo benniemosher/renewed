@@ -32,7 +32,7 @@ tasks:
   run:
     desc: Build, install, and launch on simulator
     cmds:
-      - xcrun simctl boot "iPhone 15" 2>/dev/null || true
+      - xcrun simctl boot "iPhone 17" 2>/dev/null || true
       - open -a Simulator
       - task: build
       - |
