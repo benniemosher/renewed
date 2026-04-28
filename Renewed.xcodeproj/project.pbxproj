@@ -10,6 +10,7 @@
 		1D44749C7C93E4DC42A957ED /* TrackerRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */; };
 		24194D0CEC21650371DA3251 /* TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C054D6732FD0D07615293 /* TrackerUITests.swift */; };
 		3445177327DBEE420EAC9D71 /* RenewedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */; };
+		3943CE0ECED784B4C44E23DB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647C94B68D75D6D9910CACD0 /* LaunchScreenView.swift */; };
 		396CEE9B353BD344DC23C2DD /* DateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A82AC5A1A0C88B58B7512 /* DateCalculationService.swift */; };
 		3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CF87781BD007A756F5673 /* SettingsView.swift */; };
 		459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF89D75ACB3DC857DBF506 /* MainTabView.swift */; };
@@ -18,6 +19,7 @@
 		5DEB4FFA44C7EAC3187CA2FA /* ColorPickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */; };
 		61EC46CA3CCDA2C060757786 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411283F45317AA62F5D3BE1B /* TrackerTests.swift */; };
 		623CF9E31AF35ECE4CD145D6 /* AddEditTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */; };
+		7A39989ACED5786FB07B08A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D511F9033AAD27EEDBF8909 /* Assets.xcassets */; };
 		7FD4B5D0EC88FCB74D12069E /* TrackerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */; };
 		92408B3BD16304646E52F30C /* RenewedWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */; };
 		9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE1C3C24BBDE97583AB65B /* Tracker.swift */; };
@@ -63,8 +65,10 @@
 		411283F45317AA62F5D3BE1B /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidgetBundle.swift; sourceTree = "<group>"; };
 		45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepositoryTests.swift; sourceTree = "<group>"; };
+		4D511F9033AAD27EEDBF8909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RenewedWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		643321B76E30506023F5149A /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
+		647C94B68D75D6D9910CACD0 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidget.swift; sourceTree = "<group>"; };
 		89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedApp.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		73F8723E515CD0BD6389788E = {
 			isa = PBXGroup;
 			children = (
+				90BFE06C16DE2818FB04ED82 /* Resources */,
 				4DE41C69A7C22A03ADA65285 /* Sources */,
 				D2D1A9458D82041142BB1E8B /* Tests */,
 				C7B4BB2507389DF8A3851460 /* Widget */,
@@ -180,6 +185,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		90BFE06C16DE2818FB04ED82 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D511F9033AAD27EEDBF8909 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		93460AFB8EFF8E2BCDFFBF1A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 			children = (
 				311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */,
 				2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */,
+				647C94B68D75D6D9910CACD0 /* LaunchScreenView.swift */,
 				0FDF89D75ACB3DC857DBF506 /* MainTabView.swift */,
 				108CF87781BD007A756F5673 /* SettingsView.swift */,
 				24CEC173CB0AA0445A5AF25E /* TrackerListView.swift */,
@@ -290,6 +304,7 @@
 			buildConfigurationList = 090A3AF37646A74A68AFA2E3 /* Build configuration list for PBXNativeTarget "Renewed" */;
 			buildPhases = (
 				48D35782586A7BB08D2C00CF /* Sources */,
+				847F4CC676F321CAEF08270B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -338,6 +353,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		847F4CC676F321CAEF08270B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A39989ACED5786FB07B08A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		219DD95A918CEEAB793EC14A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -359,6 +385,7 @@
 				DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */,
 				E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */,
 				EDB55016F595BDC395DFC3C0 /* IconPickerView.swift in Sources */,
+				3943CE0ECED784B4C44E23DB /* LaunchScreenView.swift in Sources */,
 				459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */,
 				FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */,
 				3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */,
