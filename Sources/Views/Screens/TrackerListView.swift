@@ -4,12 +4,13 @@ import SwiftUI
 struct TrackerListView: View {
   @Query(sort: \Tracker.createdAt, order: .reverse) private var trackers: [Tracker]
   @Environment(\.modelContext) private var modelContext
+  var onCreateTracker: (() -> Void)?
 
   var body: some View {
     NavigationStack {
       Group {
         if trackers.isEmpty {
-          EmptyStateView()
+          EmptyStateView(onCreateTracker: onCreateTracker)
         } else {
           List {
             ForEach(trackers) { tracker in

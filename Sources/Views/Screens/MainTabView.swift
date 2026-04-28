@@ -5,7 +5,7 @@ struct MainTabView: View {
 
   var body: some View {
     TabView(selection: $selectedTab) {
-      TrackerListView()
+      TrackerListView(onCreateTracker: { selectedTab = 1 })
         .tabItem {
           Label("Trackers", systemImage: "list.bullet")
         }

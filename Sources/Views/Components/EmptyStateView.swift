@@ -1,23 +1,42 @@
 import SwiftUI
 
 struct EmptyStateView: View {
-  var iconName: String = "leaf.fill"
-  var message: String = "Your journey begins with the first step"
+  var onCreateTracker: (() -> Void)?
 
   var body: some View {
-    VStack(spacing: 16) {
-      Image(systemName: iconName)
+    VStack(spacing: 24) {
+      Image(systemName: "heart.fill")
         .font(.system(size: 64))
-        .foregroundColor(.green)
+        .foregroundColor(.accentColor)
 
-      Text(message)
-        .font(.title3)
-        .foregroundColor(.secondary)
-        .multilineTextAlignment(.center)
-        .padding(.horizontal)
+      VStack(spacing: 8) {
+        Text("Begin Your Journey")
+          .font(.title2.bold())
+
+        Text("Track your days of freedom, hope, and renewal")
+          .font(.body)
+          .foregroundColor(.secondary)
+          .multilineTextAlignment(.center)
+          .padding(.horizontal, 32)
+      }
+
+      if let onCreateTracker {
+        Button(action: onCreateTracker) {
+          Text("Create Your First Tracker")
+            .font(.headline)
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.borderedProminent)
+        .padding(.horizontal, 48)
+        .accessibilityIdentifier("createFirstTrackerButton")
+      }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .accessibilityElement(children: .combine)
     .accessibilityIdentifier("emptyStateView")
   }
+}
+
+#Preview {
+  EmptyStateView(onCreateTracker: {})
 }

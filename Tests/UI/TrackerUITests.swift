@@ -40,7 +40,7 @@ final class TrackerUITests: XCTestCase {
 
   /// Asserts the tracker list is showing the empty state.
   private func assertEmptyState() {
-    let emptyStateText = app.staticTexts["Your journey begins with the first step"]
+    let emptyStateText = app.staticTexts["Begin Your Journey"]
     XCTAssertTrue(emptyStateText.waitForExistence(timeout: 5))
   }
 
