@@ -15,9 +15,11 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.benniemosher.renewed
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     sources:
       - path: Sources
         createIntermediateGroups: true
+      - path: Resources/Assets.xcassets
     resources:
       - Resources
     entitlements:
