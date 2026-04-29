@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BFD5F0F67F3DBB30FBBF4D5 /* SelectTrackerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCEAEF7CFDEFB25FA851666 /* SelectTrackerIntent.swift */; };
 		1D44749C7C93E4DC42A957ED /* TrackerRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */; };
 		24194D0CEC21650371DA3251 /* TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C054D6732FD0D07615293 /* TrackerUITests.swift */; };
 		3445177327DBEE420EAC9D71 /* RenewedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */; };
@@ -20,6 +21,7 @@
 		5DEB4FFA44C7EAC3187CA2FA /* ColorPickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */; };
 		61EC46CA3CCDA2C060757786 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411283F45317AA62F5D3BE1B /* TrackerTests.swift */; };
 		623CF9E31AF35ECE4CD145D6 /* AddEditTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */; };
+		6579077FC5370C517F6DE924 /* ConfigurableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1924A319AA801B46216FE /* ConfigurableProvider.swift */; };
 		6713C52B973BDBDEDBAABA8E /* SharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */; };
 		7A39989ACED5786FB07B08A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D511F9033AAD27EEDBF8909 /* Assets.xcassets */; };
 		7D897ECD6EE707C355915675 /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */; };
@@ -28,8 +30,10 @@
 		9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE1C3C24BBDE97583AB65B /* Tracker.swift */; };
 		A7553B50942C320AAD5F3DD3 /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */; };
 		B15C7257E8E078064EAEC121 /* TrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2A3306704DA73C96729906 /* TrackerRepository.swift */; };
+		B46220599A153E67AEFF78D1 /* TrackerQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB57275A42B9DA5DEBB74CD /* TrackerQuery.swift */; };
 		BF05B4AFB47D36B8344FF0D8 /* SwiftDataTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */; };
 		C0F5E123488761034E91473B /* RenewedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */; };
+		C9C548A3D978C4C16D440F1C /* TrackerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D895DA05EBA74C1E3BC98A0 /* TrackerEntity.swift */; };
 		DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */; };
 		DD9AFC12BFE211757EB7DFEF /* SharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */; };
 		E076648CFA888626885214FB /* RenewedWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -88,16 +92,19 @@
 		2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackerView.swift; sourceTree = "<group>"; };
 		296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		2B6A82AC5A1A0C88B58B7512 /* DateCalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculationService.swift; sourceTree = "<group>"; };
+		2D895DA05EBA74C1E3BC98A0 /* TrackerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerEntity.swift; sourceTree = "<group>"; };
 		311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTrackerView.swift; sourceTree = "<group>"; };
 		411283F45317AA62F5D3BE1B /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidgetBundle.swift; sourceTree = "<group>"; };
 		45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepositoryTests.swift; sourceTree = "<group>"; };
 		482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModelContainer.swift; sourceTree = "<group>"; };
+		4AC1924A319AA801B46216FE /* ConfigurableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableProvider.swift; sourceTree = "<group>"; };
 		4D511F9033AAD27EEDBF8909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DD207546D979CC41BB08366 /* SharedModelContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModelContainerTests.swift; sourceTree = "<group>"; };
 		5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RenewedWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		643321B76E30506023F5149A /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
 		647C94B68D75D6D9910CACD0 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		6AB57275A42B9DA5DEBB74CD /* TrackerQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerQuery.swift; sourceTree = "<group>"; };
 		6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidget.swift; sourceTree = "<group>"; };
 		89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedApp.swift; sourceTree = "<group>"; };
@@ -111,6 +118,7 @@
 		DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTrackerRepository.swift; sourceTree = "<group>"; };
 		DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerGridView.swift; sourceTree = "<group>"; };
 		E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateCalculationService.swift; sourceTree = "<group>"; };
+		ECCEAEF7CFDEFB25FA851666 /* SelectTrackerIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackerIntent.swift; sourceTree = "<group>"; };
 		FE2A3306704DA73C96729906 /* TrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,8 +197,12 @@
 		789B96872DE884D008FBB01B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4AC1924A319AA801B46216FE /* ConfigurableProvider.swift */,
 				6AFE12B4D82058E2D4E6F958 /* RenewedWidget.swift */,
 				442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */,
+				ECCEAEF7CFDEFB25FA851666 /* SelectTrackerIntent.swift */,
+				2D895DA05EBA74C1E3BC98A0 /* TrackerEntity.swift */,
+				6AB57275A42B9DA5DEBB74CD /* TrackerQuery.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -408,11 +420,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6579077FC5370C517F6DE924 /* ConfigurableProvider.swift in Sources */,
 				3445177327DBEE420EAC9D71 /* RenewedWidget.swift in Sources */,
 				92408B3BD16304646E52F30C /* RenewedWidgetBundle.swift in Sources */,
+				1BFD5F0F67F3DBB30FBBF4D5 /* SelectTrackerIntent.swift in Sources */,
 				6713C52B973BDBDEDBAABA8E /* SharedModelContainer.swift in Sources */,
 				FCD1DE561FB447E76D3316C8 /* Tracker.swift in Sources */,
 				7D897ECD6EE707C355915675 /* TrackerCategory.swift in Sources */,
+				C9C548A3D978C4C16D440F1C /* TrackerEntity.swift in Sources */,
+				B46220599A153E67AEFF78D1 /* TrackerQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
