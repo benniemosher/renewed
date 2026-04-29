@@ -362,6 +362,12 @@
 					D005558889A1BF47B8FF4F5D = {
 						TestTargetID = FC36E598559AB6926C09BA4B;
 					};
+					D947BC9ECAEFF43486B8BB41 = {
+						DevelopmentTeam = 5GJFWJ7UQ5;
+					};
+					FC36E598559AB6926C09BA4B = {
+						DevelopmentTeam = 5GJFWJ7UQ5;
+					};
 				};
 			};
 			buildConfigurationList = 22F4DCCB1AA9C66D3EC33656 /* Build configuration list for PBXProject "Renewed" */;
@@ -559,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Widget/Config/RenewedWidget.entitlements;
+				DEVELOPMENT_TEAM = 5GJFWJ7UQ5;
 				INFOPLIST_FILE = Widget/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -577,6 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/Config/Renewed.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5GJFWJ7UQ5;
 				INFOPLIST_FILE = Sources/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -594,6 +602,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/Config/Renewed.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5GJFWJ7UQ5;
 				INFOPLIST_FILE = Sources/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -660,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Widget/Config/RenewedWidget.entitlements;
+				DEVELOPMENT_TEAM = 5GJFWJ7UQ5;
 				INFOPLIST_FILE = Widget/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
