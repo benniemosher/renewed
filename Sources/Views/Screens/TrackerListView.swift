@@ -40,6 +40,7 @@ struct TrackerListView: View {
     for index in offsets {
       modelContext.delete(trackers[index])
     }
+    try? modelContext.save()
     WidgetCenter.shared.reloadAllTimelines()
   }
 }
