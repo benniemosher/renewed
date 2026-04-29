@@ -15,11 +15,14 @@
 		3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108CF87781BD007A756F5673 /* SettingsView.swift */; };
 		459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF89D75ACB3DC857DBF506 /* MainTabView.swift */; };
 		4D1D42330A88C584717EFA94 /* DateCalculationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E18C5046C87B8585D9F610E /* DateCalculationServiceTests.swift */; };
+		52F3F025B44C3017E08F3CF9 /* SharedModelContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD207546D979CC41BB08366 /* SharedModelContainerTests.swift */; };
 		5993C10C69C2A211CAA5915D /* TrackerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CEC173CB0AA0445A5AF25E /* TrackerListView.swift */; };
 		5DEB4FFA44C7EAC3187CA2FA /* ColorPickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66FA312B219F1922D34C64 /* ColorPickerGridView.swift */; };
 		61EC46CA3CCDA2C060757786 /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411283F45317AA62F5D3BE1B /* TrackerTests.swift */; };
 		623CF9E31AF35ECE4CD145D6 /* AddEditTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311534E27C5F733FB5B97D1F /* AddEditTrackerView.swift */; };
+		6713C52B973BDBDEDBAABA8E /* SharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */; };
 		7A39989ACED5786FB07B08A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D511F9033AAD27EEDBF8909 /* Assets.xcassets */; };
+		7D897ECD6EE707C355915675 /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4771B7CA1D303F08C21C5 /* TrackerCategory.swift */; };
 		7FD4B5D0EC88FCB74D12069E /* TrackerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9612FBD483C8A8DDC467470 /* TrackerCardView.swift */; };
 		92408B3BD16304646E52F30C /* RenewedWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */; };
 		9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE1C3C24BBDE97583AB65B /* Tracker.swift */; };
@@ -28,10 +31,12 @@
 		BF05B4AFB47D36B8344FF0D8 /* SwiftDataTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC58BB83E261500351F9BDEA /* SwiftDataTrackerRepository.swift */; };
 		C0F5E123488761034E91473B /* RenewedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */; };
 		DA93607AA18C45E46A113C0D /* DefaultDateCalculationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */; };
+		DD9AFC12BFE211757EB7DFEF /* SharedModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */; };
 		E076648CFA888626885214FB /* RenewedWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E69521A7DE98EB5C684E7736 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296AFBB6A426ED33B0EE5AF9 /* EmptyStateView.swift */; };
 		EDB55016F595BDC395DFC3C0 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643321B76E30506023F5149A /* IconPickerView.swift */; };
 		F151E2A82E0346395A109774 /* AddTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2690A5CDF31F27512A2C6D36 /* AddTrackerView.swift */; };
+		FCD1DE561FB447E76D3316C8 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE1C3C24BBDE97583AB65B /* Tracker.swift */; };
 		FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6BBFF749D4E801FD4A186C /* RenewedApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +92,9 @@
 		411283F45317AA62F5D3BE1B /* TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerTests.swift; sourceTree = "<group>"; };
 		442C61D349A29E726DAF4E10 /* RenewedWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewedWidgetBundle.swift; sourceTree = "<group>"; };
 		45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRepositoryTests.swift; sourceTree = "<group>"; };
+		482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModelContainer.swift; sourceTree = "<group>"; };
 		4D511F9033AAD27EEDBF8909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DD207546D979CC41BB08366 /* SharedModelContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModelContainerTests.swift; sourceTree = "<group>"; };
 		5E0F01E452B85C6F87EC2795 /* RenewedWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RenewedWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		643321B76E30506023F5149A /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
 		647C94B68D75D6D9910CACD0 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
@@ -131,6 +138,7 @@
 			children = (
 				1E18C5046C87B8585D9F610E /* DateCalculationServiceTests.swift */,
 				C0EA7AC54DE7E1E144A4D941 /* RenewedTests.swift */,
+				5DD207546D979CC41BB08366 /* SharedModelContainerTests.swift */,
 				45CEFEB32AD9EBA9F1A06DF3 /* TrackerRepositoryTests.swift */,
 				411283F45317AA62F5D3BE1B /* TrackerTests.swift */,
 			);
@@ -192,6 +200,7 @@
 			children = (
 				2B6A82AC5A1A0C88B58B7512 /* DateCalculationService.swift */,
 				E7C11D23A5541A470CA8E33D /* DefaultDateCalculationService.swift */,
+				482511E44A2D2EF462667BE0 /* SharedModelContainer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -395,6 +404,9 @@
 			files = (
 				3445177327DBEE420EAC9D71 /* RenewedWidget.swift in Sources */,
 				92408B3BD16304646E52F30C /* RenewedWidgetBundle.swift in Sources */,
+				6713C52B973BDBDEDBAABA8E /* SharedModelContainer.swift in Sources */,
+				FCD1DE561FB447E76D3316C8 /* Tracker.swift in Sources */,
+				7D897ECD6EE707C355915675 /* TrackerCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				459A02CCF77B6B8A5004E41B /* MainTabView.swift in Sources */,
 				FFF2D772317C58D53EAE9A67 /* RenewedApp.swift in Sources */,
 				3ECE9CC7E2FB9BBB255E0384 /* SettingsView.swift in Sources */,
+				DD9AFC12BFE211757EB7DFEF /* SharedModelContainer.swift in Sources */,
 				BF05B4AFB47D36B8344FF0D8 /* SwiftDataTrackerRepository.swift in Sources */,
 				9502FF7139ECD56F7D611A0C /* Tracker.swift in Sources */,
 				7FD4B5D0EC88FCB74D12069E /* TrackerCardView.swift in Sources */,
@@ -436,6 +449,7 @@
 			files = (
 				4D1D42330A88C584717EFA94 /* DateCalculationServiceTests.swift in Sources */,
 				C0F5E123488761034E91473B /* RenewedTests.swift in Sources */,
+				52F3F025B44C3017E08F3CF9 /* SharedModelContainerTests.swift in Sources */,
 				1D44749C7C93E4DC42A957ED /* TrackerRepositoryTests.swift in Sources */,
 				61EC46CA3CCDA2C060757786 /* TrackerTests.swift in Sources */,
 			);

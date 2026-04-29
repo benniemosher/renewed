@@ -1,5 +1,6 @@
 import SwiftData
 import SwiftUI
+import WidgetKit
 
 struct AddEditTrackerView: View {
   @Environment(\.modelContext) private var modelContext
@@ -156,6 +157,7 @@ struct AddEditTrackerView: View {
 
       do {
         try modelContext.save()
+        WidgetCenter.shared.reloadAllTimelines()
       } catch {
         errorMessage = error.localizedDescription
         return
@@ -171,6 +173,7 @@ struct AddEditTrackerView: View {
         )
         modelContext.insert(newTracker)
         try modelContext.save()
+        WidgetCenter.shared.reloadAllTimelines()
       } catch let error as TrackerValidationError {
         errorMessage = error.errorDescription
         return
@@ -192,6 +195,7 @@ struct AddEditTrackerView: View {
     guard let tracker else { return }
     modelContext.delete(tracker)
     try? modelContext.save()
+    WidgetCenter.shared.reloadAllTimelines()
     dismiss()
   }
 

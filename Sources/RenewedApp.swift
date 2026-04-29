@@ -6,12 +6,7 @@ struct RenewedApp: App {
   private let modelContainer: ModelContainer
 
   init() {
-    if CommandLine.arguments.contains("--uitesting") {
-      let config = ModelConfiguration(isStoredInMemoryOnly: true)
-      modelContainer = try! ModelContainer(for: Tracker.self, configurations: config)
-    } else {
-      modelContainer = try! ModelContainer(for: Tracker.self)
-    }
+    modelContainer = SharedModelContainer.create()
   }
 
   var body: some Scene {

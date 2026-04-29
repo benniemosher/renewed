@@ -25,10 +25,6 @@ targets:
     entitlements:
       path: Sources/Config/Renewed.entitlements
       properties:
-        com.apple.developer.icloud-container-identifiers:
-          - iCloud.$(CFBundleIdentifier)
-        com.apple.developer.icloud-services:
-          - CloudKit
         com.apple.security.application-groups:
           - group.com.benniemosher.renewed
     dependencies:
@@ -61,6 +57,9 @@ targets:
     sources:
       - path: Widget/Sources
         createIntermediateGroups: true
+      - path: Sources/Models/Tracker.swift
+      - path: Sources/Models/TrackerCategory.swift
+      - path: Sources/Services/SharedModelContainer.swift
     resources:
       - Widget/Resources
     entitlements:
