@@ -3,6 +3,8 @@ import SwiftUI
 import WidgetKit
 
 struct Provider: TimelineProvider {
+  private static let container: ModelContainer = SharedModelContainer.create()
+
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(
       date: Date(),
@@ -41,8 +43,8 @@ struct Provider: TimelineProvider {
   }
 
   private func fetchFeaturedTracker() -> Tracker? {
-    let container = SharedModelContainer.create()
-    let context = ModelContext(container)
+    let context = ModelContext(Self.container)
+    context.autosaveEnabled = false
     let descriptor = FetchDescriptor<Tracker>(
       sortBy: [SortDescriptor(\.startDate, order: .forward)]
     )
