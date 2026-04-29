@@ -2,84 +2,6 @@ import SwiftData
 import SwiftUI
 import WidgetKit
 
-struct Provider: TimelineProvider {
-  private static let container: ModelContainer = SharedModelContainer.create()
-
-  func placeholder(in context: Context) -> SimpleEntry {
-    SimpleEntry(
-      date: Date(),
-      trackerTitle: "Sobriety",
-      days: 42,
-      iconName: "leaf.fill",
-      color: "green"
-    )
-  }
-
-  func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-    if context.isPreview {
-      completion(placeholder(in: context))
-      return
-    }
-
-    let entry = fetchCurrentEntry(at: Date())
-    completion(entry)
-  }
-
-  func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-    let calendar = Calendar.current
-    let now = Date()
-    let startOfToday = calendar.startOfDay(for: now)
-    let featured = fetchFeaturedTracker()
-
-    var entries: [SimpleEntry] = []
-    for dayOffset in 0..<7 {
-      let entryDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfToday)!
-      let entry = makeEntry(for: featured, at: entryDate, calendar: calendar)
-      entries.append(entry)
-    }
-
-    let timeline = Timeline(entries: entries, policy: .atEnd)
-    completion(timeline)
-  }
-
-  private func fetchFeaturedTracker() -> Tracker? {
-    let context = ModelContext(Self.container)
-    context.autosaveEnabled = false
-    let descriptor = FetchDescriptor<Tracker>(
-      sortBy: [SortDescriptor(\.startDate, order: .forward)]
-    )
-    return try? context.fetch(descriptor).first
-  }
-
-  private func fetchCurrentEntry(at date: Date) -> SimpleEntry {
-    makeEntry(for: fetchFeaturedTracker(), at: date, calendar: .current)
-  }
-
-  private func makeEntry(for tracker: Tracker?, at date: Date, calendar: Calendar) -> SimpleEntry {
-    guard let tracker else {
-      return SimpleEntry(
-        date: date,
-        trackerTitle: nil,
-        days: 0,
-        iconName: nil,
-        color: nil
-      )
-    }
-
-    let startDay = calendar.startOfDay(for: tracker.startDate)
-    let entryDay = calendar.startOfDay(for: date)
-    let days = calendar.dateComponents([.day], from: startDay, to: entryDay).day ?? 0
-
-    return SimpleEntry(
-      date: date,
-      trackerTitle: tracker.title,
-      days: days,
-      iconName: tracker.iconName,
-      color: tracker.color
-    )
-  }
-}
-
 struct SimpleEntry: TimelineEntry {
   let date: Date
   let trackerTitle: String?
@@ -89,7 +11,7 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct RenewedWidgetEntryView: View {
-  var entry: Provider.Entry
+  var entry: SimpleEntry
 
   private var themeColor: Color {
     switch entry.color {
@@ -162,7 +84,9 @@ struct RenewedWidget: Widget {
   let kind: String = "RenewedWidget"
 
   var body: some WidgetConfiguration {
-    StaticConfiguration(kind: kind, provider: Provider()) { entry in
+    AppIntentConfiguration(
+      kind: kind, intent: SelectTrackerIntent.self, provider: ConfigurableProvider()
+    ) { entry in
       RenewedWidgetEntryView(entry: entry)
     }
     .configurationDisplayName("Renewed")
