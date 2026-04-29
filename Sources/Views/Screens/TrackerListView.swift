@@ -1,5 +1,6 @@
 import SwiftData
 import SwiftUI
+import WidgetKit
 
 struct TrackerListView: View {
   @Query(sort: \Tracker.createdAt, order: .reverse) private var trackers: [Tracker]
@@ -39,6 +40,8 @@ struct TrackerListView: View {
     for index in offsets {
       modelContext.delete(trackers[index])
     }
+    try? modelContext.save()
+    WidgetCenter.shared.reloadAllTimelines()
   }
 }
 
