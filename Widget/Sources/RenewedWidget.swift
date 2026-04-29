@@ -3,6 +3,8 @@ import SwiftUI
 import WidgetKit
 
 struct Provider: TimelineProvider {
+  private static let container: ModelContainer = SharedModelContainer.create()
+
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(
       date: Date(),
